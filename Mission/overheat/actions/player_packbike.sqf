@@ -1,0 +1,12 @@
+_object = _this select 3;
+deletevehicle _object;
+player playActionNow "Medic";
+r_interrupt = false;
+player addWeapon "ItemToolbox";
+[player,"repair",0,false,10] call dayz_zombieSpeak;
+[player,10,true,(getPosATL player)] spawn player_alertZombies;
+sleep 6;
+cutText ["\n\nYou have packed your bike and been given back your toolbox!", "PLAIN DOWN"];
+r_interrupt = false;
+player switchMove "";
+player playActionNow "stop";
