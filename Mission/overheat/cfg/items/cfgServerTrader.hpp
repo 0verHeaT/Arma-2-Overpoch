@@ -1,0 +1,15 @@
+class CfgTraderCategory {
+	#include "Category\Bandit.hpp"
+	#include "Category\NATOSuppliesOW.hpp"
+	#include "Category\HeroWeapons.hpp"
+	#include "Category\NeutralAmmunition.hpp"
+	#include "Category\NeutralSupplies.hpp"
+	#include "Category\NeutralUnarmedVehicles.hpp"
+	#include "Category\NeutralWeapons.hpp"
+	#include "Category\Overwatch.hpp"
+	#include "Category\Wholesale.hpp"
+	#include "Category\Metals.hpp"
+	#include "Category\Blackmarket.hpp"
+	#include "Category\Gems.hpp"
+	#include "Category\Origins.hpp"
+};
