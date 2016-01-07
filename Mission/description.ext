@@ -1,0 +1,27 @@
+respawn = "BASE";
+respawndelay = 5;
+onLoadMission= "[VG] Overpoch";
+OnLoadIntro = "Provided by VectionGaming.com";
+OnLoadIntroTime = False;
+OnLoadMissionTime = False;
+disabledAI = true;
+disableChannels[]={0,2,6};
+enableItemsDropping = 0;
+briefing = 0;
+debriefing = 0;
+
+onPauseScript = "";
+loadScreen = "overheat\gui\splash.jpg";
+
+class Header
+{
+ gameType = COOP;
+ minPlayers = 1;
+ maxPlayers = 100;
+};
+
+aiKills = 1;
+diagRadio = 1;
+diagHit = 1;
+
+#include "overheat\cfg\master.hpp"
