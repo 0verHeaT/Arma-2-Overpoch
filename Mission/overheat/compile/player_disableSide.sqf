@@ -1,0 +1,21 @@
+if ((ctrlText ((findDisplay 63) displayCtrl 101) != 'Side Channel')) exitWith {};
+if (isNil "player_sideWarnings") then {player_sideWarnings = 0};
+player_sideWarnings = player_sideWarnings + 1;
+if (player_sideWarnings > 2) exitWith {
+	"dynamicBlur" ppEffectEnable true;
+	"dynamicBlur" ppEffectAdjust [2];
+	"dynamicBlur" ppEffectCommit 0;
+	"colorCorrections" ppEffectEnable true;
+	"colorCorrections" ppEffectEnable true;
+	"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 0.1],  [1, 1, 1, 0.0]];
+	"colorCorrections" ppEffectCommit 0;
+	[player,0.01] call fnc_usec_damageUnconscious;
+	player setVariable ["NORRN_unconscious", true, true];
+	r_player_timeout = 300;
+	r_player_unconscious = true;
+	player setVariable["medForceUpdate",true,true];
+	player setVariable ["unconsciousTime", r_player_timeout, true];
+};
+1 cutText ["DO NOT TALK IN SIDE!","PLAIN DOWN"];
+2 cutText ["DO NOT TALK IN SIDE!","PLAIN"];
+systemChat ("DO NOT TALK IN SIDE!");
